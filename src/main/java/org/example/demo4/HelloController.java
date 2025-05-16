@@ -12,11 +12,10 @@ public class HelloController {
     @FXML
     private Label resultLabel;
 
-    private final TextReverser reverser = new TextReverser();
-
     @FXML
     protected void onReverseButtonClick() {
         String input = inputField.getText();
+        TextReverser reverser = new TextReverser();
         String reversed = reverser.reverse(input);
         resultLabel.setText(reversed);
     }
