@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.*?>
 
-<VBox spacing="10" alignment="CENTER"
-      xmlns="http://javafx.com/javafx"
-      xmlns:fx="http://javafx.com/fxml"
-      fx:controller="org.example.demo4.HelloController">
-
-<TextField fx:id="inputField" promptText="Введіть текст..." />
-    <Button text="Перевернути" onAction="#onReverseButtonClick"/>
-    <Label fx:id="resultLabel" text="Результат з'явиться тут"/>
+<?import javafx.scene.image.ImageView?>
+<VBox alignment="CENTER" spacing="10" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo4.HelloController">
+    <Button onAction="#onReverseButtonClick" text="Перевернути" />
+    <Label fx:id="resultLabel" text="Результат з'явиться тут" />
+    <ImageView fx:id="imageView" fitWidth="400" fitHeight="300" />
 </VBox>

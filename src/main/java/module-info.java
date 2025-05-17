@@ -1,6 +1,7 @@
 module org.example.demo4 {
     requires javafx.controls;
     requires javafx.fxml;
+    requires org.json;
 
 
     opens org.example.demo4 to javafx.fxml;
