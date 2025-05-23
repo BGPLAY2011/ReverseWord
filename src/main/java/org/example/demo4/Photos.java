@@ -32,4 +32,18 @@ public class Photos implements Model{
     public void printImage(ImageView imageView) {
         imageView.setImage(getRandomInternetImage());
     }
+    public File getRandomInternetImageAsFile() {
+        try {
+            URL url = new URL("https://picsum.photos/600/400");
+            File tempFile = File.createTempFile("photo_", ".jpg");
+            try (var in = url.openStream()) {
+                Files.copy(in, tempFile.toPath(), java.nio.file.StandardCopyOption.REPLACE_EXISTING);
+            }
+            return tempFile;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
 }
